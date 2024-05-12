@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { StyledListItem, StyledListContainer } from "./MealCard";
+import RateMeal from "./RateMeal";
 
 const MealDetails = () => {
   const location = useLocation();
@@ -23,17 +24,19 @@ const MealDetails = () => {
 
   const ingredients = Ingredients(meal);
 
-
   return (
     <StyledListContainer>
       <h1>{meal.strMeal}</h1>
       <img src={meal.strMealThumb} alt={meal.strMeal} />
+
+      <RateMeal mealId={meal.idMeal} />
+
       <p>{meal.strInstructions}</p>
       <h2>Ingredients</h2>
       {ingredients.map((item, index) => (
         <StyledListItem key={index}>
           <p>
-          {item.ingredient} {item.measure} 
+            {item.ingredient} {item.measure}
           </p>
         </StyledListItem>
       ))}

@@ -27,9 +27,6 @@ const MealCard = ({ meals }) => {
 
 export default MealCard;
 
-
-
-
 export const StyledListContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -49,7 +46,6 @@ export const StyledListContainer = styled.div`
 
 export const StyledListItem = styled.li`
   margin-top: 1%;
- 
 `;
 
 export const StyledList = styled.ul`
