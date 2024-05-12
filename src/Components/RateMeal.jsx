@@ -22,7 +22,6 @@ const RateMeal = ({ mealId }) => {
     ratingsInfo[mealId] = dishInfo;
     localStorage.setItem("ratingsInfo", JSON.stringify(ratingsInfo));
 
-    console.log(dishInfo);
     setCurrentRating(dishInfo.average);
   };
 
