@@ -8,7 +8,8 @@ const MealCard = ({ meals }) => {
       <StyledList>
         {meals.map((meal) => (
           <StyledListItem key={meal.idMeal}>
-            <Link to={`/meal-details/${meal.idMeal}`}>
+            {/* <Link to={`/meal-details/${meal.idMeal}`}> */}
+            <Link to={`/meal-details/${meal.idMeal}`} state={{ meal: meal }}>
               <div className="meal-card">
                 <div>
                   <h2>{meal.strMeal}</h2>
@@ -26,13 +27,16 @@ const MealCard = ({ meals }) => {
 
 export default MealCard;
 
+
+
+
 export const StyledListContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0%;
   margin-top: 5%;
-  background-color: #e8e2dd;
+  background-color: #d15e3e;
   border-radius: 50px 50px 5px 5px;
 
   img {
@@ -43,11 +47,12 @@ export const StyledListContainer = styled.div`
   }
 `;
 
-const StyledListItem = styled.li`
-  margin: 10px;
+export const StyledListItem = styled.li`
+  margin-top: 1%;
+ 
 `;
 
-const StyledList = styled.ul`
+export const StyledList = styled.ul`
   list-style-type: none;
   padding: 0;
   display: flex;
