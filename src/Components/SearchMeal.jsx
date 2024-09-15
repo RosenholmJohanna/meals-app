@@ -65,29 +65,3 @@ const ErrorMessage = styled.div`
   font-size: small;
   margin-top: 5%;
 `;
-
-// utils -->
-
-// const handleSearch = async () => {
-//   try {
-//     const response = await fetch(
-//       `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchMeal}`,
-//     );
-//     if (response.ok) {
-//       const data = await response.json();
-//       if (data.meals) {
-//         setMeals(data.meals);
-//         setError(null);
-//       } else {
-//         setMeals([]);
-//         setError("");
-//       }
-//     } else {
-//       setMeals([]);
-//       setError("error fetching data");
-//     }
-//   } catch (err) {
-//     setMeals([]);
-//     setError("");
-//   }
-// };
